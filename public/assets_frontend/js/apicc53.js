@@ -1,0 +1,1 @@
+var api={url_response:function(n){"function"==typeof utils.url_response[n[0]]&&(utils.url_response[n[0]](n[1]),delete utils.url_response[n[0]])},focus:function(){window.focus()},progress:function(n){var o;n&&(o=n[1]<1?locale.translate("startingDownload"):locale.translate("downloading"),ui.loading_wrapper.change_stats(Math.round(n[0]),0,0,0,o))}};

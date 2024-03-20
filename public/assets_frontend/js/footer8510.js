@@ -1,0 +1,1 @@
+modalVar={script:"modal_box",selector:"modal",custom_events:""};$("#logo").click(function(){window.location.href='https://popcorntimeonline.xyz/';});

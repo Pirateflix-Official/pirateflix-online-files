@@ -1,0 +1,581 @@
+#slider_tvshow .column.episodes {
+    overflow-y: auto!important;
+    max-height: 350px;
+}
+
+#slider_tvshow .column.seasons {
+    overflow-y: auto!important;
+    height: auto!important;
+    max-height: 350px;
+}
+
+#slider_trailer {
+    z-index: 50;
+}
+
+#slider_tvshow .mobile-only {
+    display: initial;
+}
+
+#slider_tvshow .backdrop {
+    display: none;
+}
+
+#slider_tvshow .head {
+    display: none;
+}
+
+#slider_tvshow .body {
+    display: none;
+}
+
+#slider_tvshow .movie_cont {
+    display: none;
+}
+
+#slider_tvshow {
+    z-index: 50;
+    overflow: hidden;
+    overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#slider_tvshow .movie-menu {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(255,255,255,0));
+    min-height: 50px;
+}
+
+#slider_tvshow .movie-menu__close-arrow {
+    display: inline-block;
+    cursor: pointer;
+    float: left;
+    margin: 10px 0 0 10px;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    text-shadow: 0 0 5px #000;
+    vertical-align: middle;
+    background: url(icons/arrow_back-24px.svg) no-repeat center center transparent;
+    background-size: cover;
+}
+
+#slider_tvshow .movie-menu__add-favorite {
+    display: inline-block;
+    cursor: pointer;
+    float: right;
+    margin: 10px 20px 0 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    text-shadow: 0 0 5px #000;
+    vertical-align: middle;
+    background: url(icons/favorite_border-24px.svg) no-repeat center center transparent;
+    background-size: cover;
+}
+
+#slider_tvshow .movie-menu__add-favorite.infavs {
+    background: url(icons/favorite-24px.svg) no-repeat center center transparent;
+}
+
+#slider_tvshow .column.seasons {
+}
+
+#slider_tvshow .column.epsiodes {
+}
+
+#slider_tvshow .info-container {
+    top: 0;
+}
+
+#slider_tvshow .info-container__poster {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#slider_tvshow .movie-info__rating {
+    margin: 0 10px;
+    /*text-shadow: 0 0 5px #228DFF, 0 0 10px #228DFF, 0 0 15px #228DFF, 0 0 20px #fff, 0 0 35px #fff, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;*/
+    color: #FFF;
+    transition: all 1s;
+}
+
+#slider_tvshow .info-container__content {
+    position: relative;
+    top: 80vh;
+    margin-top: -125px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 60%, rgba(255,255,255,0));
+    min-height: 50px;
+}
+
+#slider_tvshow .movie-info__title {
+    font-size: 34px;
+    /* text-align: center; */
+    box-sizing: border-box;
+    padding: 0 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #FFF;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+    font-family: opensansbold;
+    text-transform: uppercase;
+}
+
+#slider_tvshow .movie-info__details {
+    margin: 0 10px;
+}
+
+#slider_tvshow .movie-info__genres, #slider_tvshow .movie-info__year, #slider_tvshow .movie-info__runtime {
+    display: inline-block;
+    font-size: 16px;
+    color: #FFF;
+    margin-right: 10px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+}
+
+#slider_tvshow .movie-synopsis {
+    color: #FFF;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0 10px;
+}
+
+#slider_tvshow .synopsis-buttons {
+    padding: 10px;
+    font-size: 14px;
+    line-height: initial;
+    margin-top: -60px;
+    margin-bottom: 30px;
+}
+
+#slider_tvshow .synopsis-buttons__review {
+    font-size: 14px;
+    line-height: initial;
+    padding: 5px 10px;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    color: #444;
+    background: #FFF;
+    border-radius: 3px;
+    border: 1px solid #FFF;
+}
+
+#slider_tvshow .synopsis-buttons__trailer {
+    vertical-align: middle;
+    position: relative;
+    color: #FFF;
+    display: inline-block;
+    border: 1px rgba(255, 255, 255, 0.1) solid;
+    border-radius: 3px;
+    margin: 0 0 0 5px;
+    padding: 5px 10px 5px 35px;
+    cursor: pointer;
+    background: url(icons/videocam-24px.svg) no-repeat 5px center rgba(255, 255, 255, 0.3);
+    background-size: 24px;
+    transition: all 1s;
+}
+
+.movie-controls {
+    list-style: none;
+    margin: 10px 0 30px 0;
+    padding: 0;
+}
+
+.movie-controls:after {
+    content: "";
+    position: relative;
+    display: block;
+    clear: both;
+}
+
+.movie-controls li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    display: block;
+}
+
+.movie-controls li:first-child {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#slider_tvshow .mobile-dubbing {
+    font-size: 16px;
+    background: black;
+    color: #FFF;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+#slider_tvshow .mobile-subtitles {
+    font-size: 16px;
+    background: black;
+    color: #FFF;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    border: none;
+    padding: 5px 10px;
+    margin: 10px 0 10px 0;
+}
+
+#slider_tvshow .mobile-torrents {
+    font-size: 16px;
+    background: black;
+    color: #FFF;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    border: none;
+    padding: 5px 10px;
+    margin: 10px 0 10px 0;
+}
+
+#slider_tvshow .tvshow-seasons {
+    font-size: 16px;
+    background: black;
+    text-transform: uppercase;
+    width: 50%;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.65);
+    padding: 5px 10px;
+    margin: 10px 0;
+}
+
+#slider_tvshow .tvshow-episodes {
+    font-size: 16px;
+    background: black;
+    text-transform: uppercase;
+    width: 50%;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.65);
+    padding: 5px 10px;
+    margin: 10px 0;
+}
+
+@media screen and (min-width: 568px) {
+}
+
+@media screen and (max-width: 1199px) {
+    #slider_tvshow .episode-choose {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #slider_tvshow .mobile-only {
+        display:none;
+    }
+
+    #slider_tvshow .backdrop {
+        display: initial;
+    }
+
+    #slider_tvshow .head {
+        display: initial;
+    }
+
+    #slider_tvshow .body {
+        display: initial;
+    }
+
+    #slider_tvshow .close {
+        top: 0px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    /**
+
+    details part TV-show
+
+     */#slider_tvshow {
+        z-index: 50;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    #slider_tvshow .mobile-only {
+        display: initial;
+    }
+
+    #slider_tvshow .poster {
+        display: none;
+    }
+
+    #slider_tvshow .synopsis .reviews-btn {
+        display: none;
+    }
+
+    #slider_tvshow .close {
+        display: none;
+    }
+
+    #slider_tvshow .tvshow-menu {
+        z-index: 10;
+    }
+
+    #slider_tvshow .tvshow-menu__close-arrow {
+        display: inline-block;
+        cursor: pointer;
+        color: #FFF;
+        float: left;
+        margin: 10px 0 0 10px;
+        z-index: 10;
+        font-size: 24px;
+        position: relative;
+        text-shadow: 0 0 10px #000;
+        vertical-align: middle;
+    }
+
+    #slider_tvshow .tvshow-menu__close-arrow * {
+        cursor: pointer;
+    }
+
+    #slider_tvshow .tvshow-menu__close-arrow .icon2.back {
+        vertical-align: middle;
+        display: inline-block;
+        position: relative;
+    }
+
+    #slider_tvshow .tvshow-menu__close-arrow .icon2.back:before {
+        font-family: icomoon;
+        content: "\e60b";
+        font-size: 24px;
+        color: #fff;
+        text-shadow: 0 0 10px #000;
+        transition-property: opacity;
+        transition-duration: 0.24s;
+        transition-timing-function: ease-in;
+    }
+
+    #slider_tvshow .tvshow-menu__add-favorite {
+        display: inline-block;
+        cursor: pointer;
+        color: #FFF;
+        float: right;
+    }
+
+    #slider_tvshow .tvshow-menu__add-favorite .icon2:before {
+        position: relative;
+        font-size: 36px;
+        color: #fff;
+        text-shadow: 0 0 10px #000;
+        z-index: 10;
+        cursor: pointer;
+        transition-property: opacity;
+        transition-duration: 0.24s;
+        transition-timing-function: ease-in;
+        margin: 10px 10px 0 0;
+        display: inline-block;
+    }
+
+    #slider_tvshow .tvshow-menu__add-favorite .icon2.infavs:before {
+        content: '\e606';
+    }
+
+    #slider_tvshow .tvshow-menu__share {
+        cursor: pointer;
+        display: inline-block;
+        float: right;
+        font-size: 25px;
+        height: 30px;
+    }
+
+    #slider_tvshow .tvshow-menu:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    #slider_tvshow .poster_img {
+        display: block;
+        margin: 0 auto;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        position: relative;
+        min-height: 780px;
+        top: -49px;
+        -webkit-mask-image: -webkit-gradient(linear, right bottom, left top, color-stop(1, black), color-stop(0.5, black), color-stop(0, rgba(0, 0, 0, 0)));
+        pointer-events: none;
+        transition-property: opacity;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in;
+    }
+
+    #slider_tvshow .head {
+        position: relative;
+        height: auto;
+        top: 0;
+    }
+
+    #slider_tvshow .synopsis {
+        height: auto;
+        position: relative;
+        font-size: 22px;
+        line-height: initial;
+    }
+
+    #slider_tvshow .synopsisText {
+        margin-top: 20px;
+    }
+
+    #slider_tvshow .episode_info {
+        margin: 0 10px;
+        color: #FFF;
+        font-size: 18px;
+    }
+
+    #slider_tvshow .controls {
+        display: block;
+    }
+
+    #slider_tvshow .controls:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    div.controls > a > svg > path {
+        cursor: pointer!important;
+        /*text-shadow: 0 0 5px #228DFF, 0 0 10px #228DFF, 0 0 15px #228DFF, 0 0 20px #fff, 0 0 35px #fff, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;*/
+    }
+
+    #slider_tvshow .controls__play {
+        float: right;
+        cursor: pointer!important;
+        margin-right: 45px;
+        /*text-shadow: 0 0 5px #228DFF, 0 0 10px #228DFF, 0 0 15px #228DFF, 0 0 20px #fff, 0 0 35px #fff, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;*/
+    }
+
+    #slider_tvshow .controls__play .play-button {
+        width: 70px;
+        height: 70px;
+        cursor: pointer!important;
+        transition: all 1s;
+    }
+
+    #slider_tvshow .episode_overview {
+        font-size: 22px;
+        line-height: initial;
+    }
+
+    #slider_tvshow .body {
+        position: relative;
+        height: initial;
+        padding: 10px;
+    }
+
+    #slider_tvshow #watch_toolbox {
+        display: none;
+    }
+
+    #slider_tvshow .close {
+        top: 5px;
+    }
+
+    #slider_tvshow .poster {
+        width: 100%;
+        height: initial;
+        position: relative;
+        height: calc(100% - 30px);
+        background-size: contain;
+        border: none;
+    }
+
+    #slider_tvshow .info_cont {
+        position: relative;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        margin-top: -220px;
+    }
+
+    #slider_tvshow .episode_choose_wrapper {
+        display: none;
+    }
+
+    #slider_tvshow .column.content {
+        width: 100%;
+        float: none;
+        height: initial;
+        padding: 0;
+    }
+
+    #slider_tvshow .column.seasons {
+        width: 50%;
+        display: inline-block;
+        float: none;
+        /* height: initial;*/
+    }
+
+    #slider_tvshow .column.episodes {
+        width: 50%;
+        display: inline-block;
+        float: none;
+        /*height: initial;*/
+    }
+
+    #slider_tvshow .title {
+        font-size: 36px;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 10px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    #slider_tvshow .title_info {
+        float: none;
+        display: inline-block;
+        font-size: 18px;
+    }
+
+    #slider_tvshow .title_info.stars {
+        display: block;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    #slider_tvshow .title_info_cont {
+        padding: 10px 10px 10px;
+        text-align: center;
+    }
+
+    #slider_tvshow .title_info_cont:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
